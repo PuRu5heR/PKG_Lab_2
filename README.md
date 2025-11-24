@@ -1,4 +1,4 @@
-# Лабораторная работа №1 `Вариант 4`
+# Лабораторная работа №2
 [![Java](https://img.shields.io/badge/Java-17-red.svg)](https://docs.oracle.com/en/java/javase/17/)
 [![Spring Boot](https://img.shields.io/badge/Spring-Boot-4.svg)](https://docs.spring.io/spring-boot/api/java/index.html)
 [![HTML](https://img.shields.io/badge/HTML-5-orange.svg)](https://developer.mozilla.org/ru/docs/Web/HTML)
