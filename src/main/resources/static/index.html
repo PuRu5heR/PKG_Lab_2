@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ графических файлов</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Анализ графических файлов</h1>
+    </header>
+
+    <div class="upload-section">
+        <div class="upload-area" id="uploadArea">
+            <i class="upload-icon">📁</i>
+            <h3>Перетащите файлы сюда или нажмите для выбора</h3>
+            <p>Поддерживаемые форматы: JPG, GIF, TIF, BMP, PNG, PCX</p>
+            <input type="file" id="fileInput" multiple accept=".jpg,.jpeg,.gif,.tif,.tiff,.bmp,.png,.pcx">
+        </div>
+        <div class="stats" id="stats">
+            <div class="no-files">Нет загруженных файлов</div>
+        </div>
+        <div class="controls">
+            <button onclick="analyzeFiles()" class="btn-primary">Анализировать файлы</button>
+            <button onclick="clearAllResults()" class="btn-secondary">Очистить все результаты</button>
+        </div>
+    </div>
+
+    <div class="progress" id="progress" style="display: none;">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">Обработка...</div>
+    </div>
+
+    <div class="results-section">
+        <h2>Результаты анализа</h2>
+        <div class="table-container">
+            <table id="resultsTable">
+                <thead>
+                <tr>
+                    <th>Имя файла</th>
+                    <th>Размер (пиксели)</th>
+                    <th>Разрешение (DPI)</th>
+                    <th>Глубина цвета</th>
+                    <th>Сжатие</th>
+                    <th>Размер файла</th>
+                    <th>Детали</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="resultsBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

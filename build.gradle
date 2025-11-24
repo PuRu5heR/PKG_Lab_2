@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '4.0.0'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'by.pkg'
+version = '0.0.1-SNAPSHOT'
+description = 'PKG_Lab_2'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    implementation 'commons-io:commons-io:2.15.1'
+    implementation 'com.drewnoakes:metadata-extractor:2.18.0'
+
+    implementation 'com.twelvemonkeys.imageio:imageio-jpeg:3.10.1'
+    implementation 'com.twelvemonkeys.imageio:imageio-tiff:3.10.1'
+    implementation 'com.twelvemonkeys.imageio:imageio-bmp:3.10.1'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
