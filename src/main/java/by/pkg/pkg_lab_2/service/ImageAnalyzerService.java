@@ -149,8 +149,10 @@ public class ImageAnalyzerService {
 
                     if (xRes != null && yRes != null) {
                         imageMetadata.setResolution(xRes + "×" + yRes + " dpi");
+                        return;
                     } else if (xRes != null) {
                         imageMetadata.setResolution(xRes + " dpi");
+                        return;
                     }
                 }
             }
@@ -160,6 +162,7 @@ public class ImageAnalyzerService {
                     Object res = directory.getObject(ExifIFD0Directory.TAG_X_RESOLUTION);
                     if (res != null) {
                         imageMetadata.setResolution(res + " dpi");
+                        return;
                     }
                 }
             }

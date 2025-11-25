@@ -154,9 +154,6 @@ public class TifAnalyzerService {
                 case 283:
                     additionalInfo.put("Разрешение Y", getResolution(fileBytes, dataType, count, valueOffset, isLittleEndian) + " dpi");
                     break;
-                case 284:
-                    additionalInfo.put("План конфигурации", valueOffset == 1 ? "Chunky" : "Planar");
-                    break;
                 case 296:
                     additionalInfo.put("Единицы разрешения", getResolutionUnit(valueOffset));
                     break;
